@@ -1,8 +1,6 @@
-# Vite & NextUI Template
+# Vite Template
 
-This is a template for creating applications using Vite and NextUI (v2).
-
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/vite-template)
+This is a template for creating applications using Vite.
 
 ## Technologies Used
 

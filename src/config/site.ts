@@ -1,69 +1,53 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Vite + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "SISUNS: Sistema de Tutoría y Consejería",
+  description: "Sistema de tutoría y consejería para la escuela de Ingeniería de Sistemas e Informática en la Universidad Nacional del Santa",
   navItems: [
     {
-      label: "Home",
+      label: "Inicio",
       href: "/",
-    },
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
+      type: "main",
     },
     {
       label: "Blog",
       href: "/blog",
+      type: "main",
     },
     {
-      label: "About",
-      href: "/about",
+      label: "Nosotros",
+      href: "/nosotros",
+      type: "main",
     },
-  ],
-  navMenuItems: [
     {
       label: "Profile",
       href: "/profile",
+      type: "menu", 
     },
     {
       label: "Dashboard",
       href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
+      type: "menu",
     },
     {
       label: "Settings",
       href: "/settings",
+      type: "menu",
     },
     {
       label: "Help & Feedback",
       href: "/help-feedback",
+      type: "menu",
     },
     {
       label: "Logout",
       href: "/logout",
+      type: "menu",
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
+    github: "https://github.com/ilanangelesrodriguez/sisuns-tutoria-y-consejeria",
     docs: "https://nextui-docs-v2.vercel.app",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    discord: "https://discord.com/channels/1292322901017628723/1292326564452896789",
   },
 };
