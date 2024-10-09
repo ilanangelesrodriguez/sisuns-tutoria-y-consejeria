@@ -1,5 +1,5 @@
 import { Card, CardBody, CardHeader } from "@nextui-org/react"
-import { BookOpen, Users, Lightbulb, TrendingUp, MessageCircle } from "lucide-react"
+import { BookOpen, Users, Lightbulb, TrendingUp } from "lucide-react"
 import { motion } from "framer-motion"
 import {Image} from "@nextui-org/image"
 import { WhatsappIcon } from "@/components/icons";;

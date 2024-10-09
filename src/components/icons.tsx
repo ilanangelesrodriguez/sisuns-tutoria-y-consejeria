@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { IconSvgProps } from "@/types";
+import { JSX } from "react/jsx-runtime";
 
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
@@ -238,7 +239,7 @@ export const NextUILogo: React.FC<IconSvgProps> = (props) => {
   );
 };
 
-export const WhatsappIcon = (props) => (
+export const WhatsappIcon = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 256 258" {...props}>
 <defs>
     <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
