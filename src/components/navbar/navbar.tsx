@@ -13,8 +13,6 @@ import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/themeSwitch";
-import { GithubIcon, DiscordIcon } from "@/components/icons";
-import { Logo } from "@/components/icons";
 import SearchInput from "./searchInput";
 
 export const Navbar = () => {
@@ -22,8 +20,11 @@ export const Navbar = () => {
     <NextUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
+          
           <Link className="flex justify-start items-center gap-1" color="foreground" href="/">
-            <Logo />
+          <img src="/episi.jpeg" alt="Logo EPISI" className="logo-clase w-12 h-12 object-contain" />
+
+            
             <p className="font-bold text-inherit">Tutoría y Consejería</p>
           </Link>
         </NavbarBrand>
@@ -47,12 +48,7 @@ export const Navbar = () => {
 
       <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal href={siteConfig.links.discord} title="Discord">
-            <DiscordIcon className="text-default-500" />
-          </Link>
-          <Link isExternal href={siteConfig.links.github} title="GitHub">
-            <GithubIcon className="text-default-500" />
-          </Link>
+          
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
@@ -61,9 +57,6 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link>
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
