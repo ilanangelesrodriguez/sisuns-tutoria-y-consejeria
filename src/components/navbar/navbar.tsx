@@ -13,7 +13,6 @@ import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/themeSwitch";
-import { Logo } from "@/components/icons";
 import SearchInput from "./searchInput";
 
 export const Navbar = () => {
@@ -21,10 +20,11 @@ export const Navbar = () => {
     <NextUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
-          <img src="/episi.jpeg" alt="Logo EPISI" className="logo-clase" />
-          <Link className="flex justify-start items-center gap-1" color="foreground" href="/">
           
-            <Logo />
+          <Link className="flex justify-start items-center gap-1" color="foreground" href="/">
+          <img src="/episi.jpeg" alt="Logo EPISI" className="logo-clase w-12 h-12 object-contain" />
+
+            
             <p className="font-bold text-inherit">Tutoría y Consejería</p>
           </Link>
         </NavbarBrand>
