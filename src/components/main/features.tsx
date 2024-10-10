@@ -9,6 +9,7 @@ const features = [
     title: "Asesoría Académica Personalizada",
     description: "Recibe orientación individualizada para mejorar tu rendimiento académico y superar desafíos en tus estudios.",
     icon: BookOpen,
+    
   },
   {
     title: "Mentoría de Pares",
