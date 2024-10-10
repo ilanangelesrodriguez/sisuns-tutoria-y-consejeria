@@ -6,6 +6,7 @@ import AboutPage from "@/pages/about";
 import NotFound from "@/pages/notFound/notFound";
 
 function App() {
+  //MI COMENTARIO G
   return (
     <Routes>
       <Route element={<IndexPage />} path="/" />
