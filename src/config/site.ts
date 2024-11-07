@@ -19,6 +19,20 @@ export const siteConfig = {
       href: "/nosotros",
       type: "main",
     },
+
+    //TIPO BUTTON---ELIMINAR
+    {
+      label: "Nosotros",
+      href: "/nosotros",
+      type: "btn",
+    },
+    {
+      label: "Login",
+      href: "/login",
+      type: "btn",
+    },
+
+    //TIPO MENU
     {
       label: "Contactos",
       href: "/contactos",
