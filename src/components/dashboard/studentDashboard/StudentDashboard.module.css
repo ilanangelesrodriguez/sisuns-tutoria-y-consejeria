@@ -1,0 +1,43 @@
+.avatar{
+    font-size: 7em;
+    height: 1em;
+    width: 1em;
+    color: #41B3A4;
+    border: #41B3A4 solid 4px;
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.dark body .theme{
+    background-color: blue;
+    border: solid rgb(37, 239, 19) 8px;
+}
+
+.contain_student_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: solid #41B3A4 1px; */
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #ffffff56;
+    box-shadow: none;
+}
+.title{
+    color: #41B3A4;
+    font-weight: bold;
+}
+.button_log_out{
+    margin-top: 20px;
+}
+
+/*
+<div className="flex flex-col items-center md:w-1/4 p-4 rounded-md shadow-md"
+style={{ borderColor: "#ff6f61", backgroundColor: "#ffffff", border: "1px solid #ff6f61" }}>
+
+
+#bec5be
+#41B3A4
+
+*/

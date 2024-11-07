@@ -1,0 +1,98 @@
+.login_container{
+  max-width: 410px;
+  margin: 0 auto;
+  border: 1px gray;
+  border-radius: 0.5rem;
+  padding: 2rem 4rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);;
+}
+
+.login_container .form_title{
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom:1.5rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.social_login .social_button{
+  display: flex;
+  width: 100%;
+  gap: 0.81rem;
+  cursor: pointer;
+  font-size: 1.05rem;
+  padding:0.75rem 0.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.31rem;
+  justify-content: center;
+  background: #bec5be#bec5be;
+  border: 1px solid #bec5be;
+  margin-bottom: 1.5rem;
+}
+
+
+
+.login_form .input_wrapper {
+  height: 54px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.login_form .input_wrapper .input_field {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 1.05rem;
+  border-radius: 0.31rem;
+  border: 1px solid #41B3A4; 
+  padding: 0 1.25rem 0 3.12rem;
+  box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+  transition: border-color 0.2s ease;
+}
+
+
+.login_form .input-wrapper .input_field::placeholder {
+  color: #41B3A4;
+}
+
+.login_form .input_wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 0.9rem;
+  pointer-events: none; 
+  transform: translateY(-50%);
+  transition: color 0.2s ease;
+}
+
+.social_login .social_button .social_icon{
+  width: 23px;
+}
+
+.login_form .login_button{
+  width: 100%;
+  height: 54px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #FFF;
+  font-weight: 500;
+  font-size: 1.125rem;
+  background: #41B3A4;
+  margin-top: 2.19rem;
+  border-radius: 0.31rem;
+  transition: 0.2s ease;
+}
+
+.login_form .login_button:hover{
+  background: #50AB91;
+}
+
+.login_form .forgot_pass_link {
+  color: #606060; 
+  display: block;
+  width: fit-content;
+  margin-top: -0.1rem;
+  text-decoration: underline; 
+}
