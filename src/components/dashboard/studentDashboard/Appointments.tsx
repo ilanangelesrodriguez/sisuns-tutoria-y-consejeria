@@ -1,4 +1,3 @@
-import React from 'react';
 import AppointmentItem from './AppointmentItem';
 
 const appointments = [

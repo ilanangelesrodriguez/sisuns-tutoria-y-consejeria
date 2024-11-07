@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card } from "@nextui-org/react";
 import Styles from "./StudentDashboard.module.css";
 import "./StudentDashboard.module.css";

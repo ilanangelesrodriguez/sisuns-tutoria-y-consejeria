@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Card } from '@nextui-org/react';
 import UserInfo from './userInfo';
 import TimeSelector from './timeSelector';

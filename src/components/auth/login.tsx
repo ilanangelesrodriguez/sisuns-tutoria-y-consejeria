@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./login.module.css"; // Importa el CSS module
 import { useNavigate } from "react-router-dom";
 const Login = () => {

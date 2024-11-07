@@ -1,4 +1,3 @@
-import React from 'react';
 import { User } from '@nextui-org/react';
 
 const UserInfo = () => {

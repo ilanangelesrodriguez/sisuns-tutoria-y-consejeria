@@ -6,7 +6,7 @@ interface AppointmentItemProps {
   modality: string;
 }
 
-const AppointmentItem: React.FC<AppointmentItemProps> = ({ tutorName, times, modality }) => (
+const AppointmentItem: React.FC<AppointmentItemProps> = ({ tutorName, times }) => (
   <Card className="border p-4 rounded-md shadow-sm">
     <div className="flex items-center gap-4 mb-4">
       <div className="w-12 h-12 rounded-full flex items-center justify-center font-bold" style={{ borderColor: "#ff6f61", color: "#ff6f61" }}>
