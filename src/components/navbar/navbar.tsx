@@ -15,7 +15,6 @@ import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/themeSwitch";
 import { IconLogIn } from "@/components/icons";
 import { Logo } from "@/components/icons";
-import SearchInput from "./searchInput";
 
 export const Navbar = () => {
   return (
