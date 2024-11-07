@@ -1,0 +1,135 @@
+    /* General Footer Styles */
+    .footer {
+        background-color: #99a09f;
+        color: rgb(214, 214, 214);
+    }
+
+    .footer_nav {
+        background-color: #3A3B47;
+        padding: 15px 16px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .footer .imagen_universidad {
+        display: block;
+        margin-top: 0px; /* Espacio entre el texto y la imagen */
+        width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+        max-width: 80px; /* Tamaño máximo de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+        border-radius: 8px; /* Bordes redondeados opcional */
+        object-fit: contain;
+        opacity: .80;
+      }
+
+    .footer .container_item_logo img{
+        margin: 10px;
+    }
+
+    .footer_nav .container_item {
+        /* border: solid black 1px; */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        color: rgb(211, 211, 211);
+    }
+
+    .footer_nav a {
+        text-decoration: none;
+        /* padding: 8px; */
+        font-size: 14px;
+        padding-bottom: 2px;
+        /* border-bottom: solid white 1px; */
+    }
+
+    .footer_nav a.active {
+        color: #41B3A4;
+    }
+
+    .footer_nav a:hover {
+        color: white;
+    }
+
+    /* ________BOTTOM */
+    .footer_bottom {
+        background-color: #50AB91;
+        padding: 15px 16px;;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    .footer_bottom .container {
+        /* border: solid black 1px; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_bottom .copyright {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .footer_bottom .bold {
+        font-weight: bold;
+    }
+
+    .footer .social_icons {
+        /* border:solid black 3px; */
+        display: flex;
+        gap: 10px;
+    }
+
+    .footer .social_icons .icon {
+        color: #ccc;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .footer .social_icons .icon:hover {
+        color: white;
+    }
+
+    .footer_bottom .container {
+        flex-direction: row;
+        justify-content: space-between;
+        color:rgb(232, 231, 231);
+        /* border: solid black 2px; */
+    }
+
+
+    /* Responsive Design */
+    @media (max-width: 980px) {
+
+        .footer_nav{
+            flex-direction: column;
+        }
+
+        .footer_nav .container_item {
+            /* border: solid white 1px; */
+            margin: 3px;
+        }
+
+        .footer_nav .container_item_logo{
+            margin-top: 10px;
+        }
+
+    }
+
+    @media (max-width: 450px) {
+
+        .footer_bottom .container{
+            flex-direction: column;
+            flex-direction: column;
+        }
+
+    }
+
+    

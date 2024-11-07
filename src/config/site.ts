@@ -19,6 +19,30 @@ export const siteConfig = {
       href: "/nosotros",
       type: "main",
     },
+
+    //TIPO BUTTON---ELIMINAR
+    {
+      label: "Nosotros",
+      href: "/nosotros",
+      type: "btn",
+    },
+    {
+      label: "Login",
+      href: "/login",
+      type: "btn",
+    },
+
+    //TIPO MENU
+    {
+      label: "Contactos",
+      href: "/contactos",
+      type: "main",
+    },
+    {
+      label: "Iniciar Sesión",
+      href: "/iniciarSesion",
+      type: "main",
+    },
     {
       label: "Profile",
       href: "/profile",
@@ -46,8 +70,7 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/ilanangelesrodriguez/sisuns-tutoria-y-consejeria",
-    docs: "https://nextui-docs-v2.vercel.app",
-    discord: "https://discord.com/channels/1292322901017628723/1292326564452896789",
+
+    docs: "https://nextui-docs-v2.vercel.app"
   },
 };
