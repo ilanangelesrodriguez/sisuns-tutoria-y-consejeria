@@ -5,20 +5,26 @@ import { Button, Card, CardBody } from "@nextui-org/react";
 import StudentAvatar from './StudentAvatar';
 import StudentInfo from './StudentInfo';
 import Tabs from './Tabs';
-import Appointments from './Appointments';
+import Profesores from './Profesores';
 import Styles from "./StudentDashboard.module.css";
+import Appointments from './Appointments';
 
 const StudentDashboard = () => {
   const [activeSection, setActiveSection] = useState("citasProgramadas");
 
   const renderContent = () => {
     if (activeSection === "citasProgramadas") {
-      return <Appointments />;
+      return (
+        <div className="flex flex-col gap-2">
+          <Profesores />
+        </div>
+        );
+      
     } else if (activeSection === "citas") {
       return (
-        <div className="flex flex-col gap-4">
-          <h2 className="text-lg font-bold" style={{ color: "#ff6f61" }}>Esta es la sección de Citas</h2>
-          <p style={{ color: "#333333" }}>Aquí podrías mostrar información de próximas citas disponibles o permitir al estudiante seleccionar una nueva cita.</p>
+        <div className="flex flex-col gap-2">
+          <Appointments />
+          <Appointments />
         </div>
       );
     }
@@ -26,7 +32,7 @@ const StudentDashboard = () => {
 
   return (
     <div className="flex flex-col md:flex-row gap-10">
-    <Card className={Styles.contain_student_info}>
+    <Card className={Styles.contain_student_info + "  max-h-[550px] overflow-auto"}>
       <CardBody className="flex flex-col items-center gap-4">
         <StudentAvatar />
         <StudentInfo />

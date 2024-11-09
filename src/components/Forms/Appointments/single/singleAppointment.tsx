@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { Card } from '@nextui-org/react';
-import UserInfo from './userInfo';
-import TimeSelector from './timeSelector';
-import SubmitButton from './submitButton';
-import StudentSelection from './StudentSelection';
+import UserInfo from '@/components/Forms/Appointments/group/userInfo';
+import TimeSelector from '@/components/Forms/Appointments/group/timeSelector';
+import SubmitButton from '@/components/Forms/Appointments/group/submitButton';
 import {Divider} from "@nextui-org/divider";
 
-const GroupAppointment = () => {
+const SingleAppointment = () => {
   const [selectedTimes, setSelectedTimes] = useState<string[]>([]);
   
   const handleTimeChange = (time: string) => {
@@ -26,11 +25,9 @@ const GroupAppointment = () => {
       <UserInfo />
       <Divider className="my-0" />
       <TimeSelector selectedTimes={selectedTimes} onTimeChange={handleTimeChange} />
-      <Divider className="my-0" />
-      <StudentSelection />
       <SubmitButton onSubmit={handleSubmit} />
     </Card>
   );
 };
 
-export default GroupAppointment;
+export default SingleAppointment;
