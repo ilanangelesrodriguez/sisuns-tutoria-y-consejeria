@@ -39,11 +39,6 @@ export const siteConfig = {
       type: "main",
     },
     {
-      label: "Iniciar Sesión",
-      href: "/iniciarSesion",
-      type: "main",
-    },
-    {
       label: "Profile",
       href: "/profile",
       type: "menu", 

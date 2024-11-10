@@ -3,6 +3,7 @@ import Hero from "@/components/main/hero";
 import Features from "@/components/main/features";
 import Contact from "@/components/main/contact";
 import Professor from "@/components/main/professor";
+import 'react-datepicker/dist/react-datepicker.css';
 
 export default function IndexPage() {
   return (
