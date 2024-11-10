@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { Button, Card, CardBody } from "@nextui-org/react";
 
 import StudentAvatar from './StudentAvatar';

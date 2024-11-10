@@ -45,17 +45,12 @@ export const Navbar = () => {
         </div>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">       
+      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
         <NavbarItem className="hidden sm:flex gap-2">
           <ThemeSwitch />
-          {
-            siteConfig.navItems.filter(item => item.type === "btn" && item.label === "Login").map((item) =>(
-                <Link href={item.href} title="Login">
-                  <IconLogIn className="text-default-500" />
-                </Link>    
-            ))
-          }
-
+          <Link href="/main_auth" title="Main Login">
+            <IconLogIn className="text-default-500" />
+          </Link>
         </NavbarItem>
         {/* <NavbarItem className="hidden lg:flex">
           <SearchInput /> 
@@ -63,13 +58,9 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        {
-            siteConfig.navItems.filter(item => item.type === "btn" && item.label === "Login").map((item) =>(
-                <Link href={item.href} title="Login">
-                  <IconLogIn className="text-default-500" />
-                </Link> 
-            ))
-          }
+            <Link href="/main_auth" title="Login">
+              <IconLogIn className="text-default-500" />
+            </Link>
         <NavbarMenuToggle />
       </NavbarContent>
 
@@ -79,24 +70,24 @@ export const Navbar = () => {
             <NavbarMenuItem key={item.href}>
               <Link
                 className={clsx(
-                  linkStyles({color: "foreground"}),
+                  linkStyles({ color: "foreground" }),
                   "data-[active=true]:text-primary data-[active=true]:font-medium",
                 )}
-                color = "foreground"
+                color="foreground"
                 href={item.href}
               >
                 {item.label}
               </Link>
             </NavbarMenuItem>
           ))}
-        {/* Separador visual */}
-        <div className="border-t border-gray-300 my-2"></div>
+          {/* Separador visual */}
+          <div className="border-t border-gray-300 my-2"></div>
 
-        {/* Alineación y estilo de ThemeSwitch */}
-        <div className="flex items-center justify-start">
-          <ThemeSwitch className="text-default-500 mx-2" />
-          <span className="ml-2 text-sm text-gray-500">Cambiar tema</span>
-        </div>
+          {/* Alineación y estilo de ThemeSwitch */}
+          <div className="flex items-center justify-start">
+            <ThemeSwitch className="text-default-500 mx-2" />
+            <span className="ml-2 text-sm text-gray-500">Cambiar tema</span>
+          </div>
         </div>
       </NavbarMenu>
     </NextUINavbar>
