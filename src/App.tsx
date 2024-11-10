@@ -6,14 +6,13 @@ import AboutPage from "@/pages/about";
 import NotFound from "@/pages/notFound/notFound";
 import Login from "./pages/auth/login";
 
-
 import StudentDashboard from "./pages/dashboards/StudentDashboard";
 import DocenteDashboard from "./pages/dashboards/DocenteDashboard";
 import AdministradorDashboard from "./pages/dashboards/AdministradorDashboard";
 
 import GroupAppointment from "./pages/forms/Appointments/groupAppointment";
 import SchedulesPage from "@/pages/SchedulesPage";
-import 'react-datepicker/dist/react-datepicker.css'; 
+// import 'react-datepicker/dist/react-datepicker.css'; 
 import SingleAppointment from "./pages/forms/Appointments/singleAppointment";
 import AssignStudents from "./pages/test_jhoan/assignStudents";//AssignStudents
 import InfPersonalDocente from "./pages/test_jhoan/infPersonalDocente";//InfPersonalDocente

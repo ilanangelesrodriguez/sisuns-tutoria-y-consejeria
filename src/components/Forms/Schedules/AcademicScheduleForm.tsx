@@ -1,48 +1,63 @@
-import  { useState } from 'react';
-import DatePicker from 'react-datepicker';
+import { useState } from 'react';
+import { DatePicker, Button, Input, Card } from '@nextui-org/react';
+import { CalendarDate } from '@nextui-org/react';
 
-const AcademicScheduleForm = () => {
-  const [startTime, setStartTime] = useState<Date | null>(null);
-  const [endTime, setEndTime] = useState<Date | null>(null);
+const AcademicScheduleForm: React.FC = () => {
+  // Usamos CalendarDate en lugar de DateValue
+  const [startTime, setStartTime] = useState<CalendarDate | null>(null);
+  const [endTime, setEndTime] = useState<CalendarDate | null>(null);
+
+  const handleSubmit = () => {
+    console.log('Horario ID:', startTime);
+    console.log('Curso:', endTime);
+    // Aquí podrías agregar la lógica para enviar los datos al backend
+  };
 
   return (
-    
-      <div className="bg-gray-100 p-6 rounded-lg shadow-md max-w-md mx-auto mt-10">
-        <h2 className="text-2xl font-semibold text-center text-teal-600 mb-4">Horario Académico</h2>
-        <label className="block text-gray-600 mb-1">Horario ID:</label>
-        <input type="text" className="w-full p-2 border border-gray-300 rounded mb-2" />
-        <label className="block text-gray-600 mb-1">Curso:</label>
-        <input type="text" className="w-full p-2 border border-gray-300 rounded mb-2" />
+    <Card className="p-6 rounded-lg shadow-md max-w-md mx-auto mt-10">
+      <h2 className="text-2xl font-semibold text-center text-teal-600 mb-4">Horario Académico</h2>
 
-        <label className="block text-gray-600 mb-1">Hora Inicio:</label>
-        <DatePicker
-          selected={startTime}
-          onChange={(date) => setStartTime(date)}
-          showTimeSelect
-          showTimeSelectOnly
-          timeIntervals={15}
-          timeCaption="Hora"
-          dateFormat="h:mm aa"
-          className="w-full p-2 border border-gray-300 rounded mb-2"
-          placeholderText="Seleccione la hora de inicio"
-        />
+      <label className="block text-gray-600 mb-1">Horario ID:</label>
+      <Input
+        type="text"
+        placeholder="Horario ID"
+        aria-label="Horario ID"
+        className="w-full mb-2"
+      />
 
-        <label className="block text-gray-600 mb-1">Hora Fin:</label>
-        <DatePicker
-          selected={endTime}
-          onChange={(date) => setEndTime(date)}
-          showTimeSelect
-          showTimeSelectOnly
-          timeIntervals={15}
-          timeCaption="Hora"
-          dateFormat="h:mm aa"
-          className="w-full p-2 border border-gray-300 rounded mb-2"
-          placeholderText="Seleccione la hora de fin"
-        />
+      <label className="block text-gray-600 mb-1">Curso:</label>
+      <Input
+        type="text"
+        placeholder="Curso"
+        aria-label="Curso"
+        className="w-full mb-2"
+      />
 
-        <button className="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 w-full">Guardar</button>
-      </div>
-    
+      <label className="block text-gray-600 mb-1">Hora Inicio:</label>
+      <DatePicker
+        value={startTime}
+        onChange={(date: CalendarDate | null) => setStartTime(date)}  // Usa CalendarDate o null
+        aria-label="Hora de inicio"
+        className="w-full mb-2"
+        // format="hh:mm a" // Formato de hora (ajústalo según tus necesidades)
+      />
+
+      <label className="block text-gray-600 mb-1">Hora Fin:</label>
+      <DatePicker
+        value={endTime}
+        onChange={(date: CalendarDate | null) => setEndTime(date)}  // Usa CalendarDate o null
+        aria-label="Hora de fin"
+        className="w-full mb-2"
+        // format="hh:mm a" // Formato de hora (ajústalo según tus necesidades)
+      />
+
+      <Button
+        className="w-full bg-teal-600 hover:bg-teal-700 text-white"
+        onClick={handleSubmit}
+      >
+        Guardar
+      </Button>
+    </Card>
   );
 };
 
