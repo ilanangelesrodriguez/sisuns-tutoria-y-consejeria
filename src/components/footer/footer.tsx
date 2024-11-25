@@ -6,7 +6,7 @@ import { Image } from "@nextui-org/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-cyan-800 to-teal-950 py-5">
+    <footer className="bg-gradient-to-r border-t py-5">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div className="flex flex-col space-y-4">
