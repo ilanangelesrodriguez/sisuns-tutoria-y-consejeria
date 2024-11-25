@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card, CardBody, Input, Textarea, Button } from "@nextui-org/react"
@@ -48,14 +46,14 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 px-4  from-purple-100 to-blue-100">
+    <section id="contact" className="py-5 px-4 from-purple-100 to-blue-100">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-4xl font-bold text-center mb-10 text-primary">Contáctanos</h2>
-        <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-8 text-primary">Contáctanos</h2>
+        <p className="text-center text-gray-400 mb-8 max-w-2xl mx-auto">
           ¿Tienes alguna pregunta o comentario? Estamos aquí para ayudarte. Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible.
         </p>
       </motion.div>
@@ -101,7 +99,7 @@ export default function Contact() {
                 >
                   <Input
                     label="Email"
-                    placeholder="tu@email.com"
+                    placeholder="tucorreo@uns.edu.pe"
                     type="email"
                     variant="bordered"
                     value={email}
@@ -125,7 +123,7 @@ export default function Contact() {
                     isInvalid={!!errors.message}
                     errorMessage={errors.message}
                     className="max-w-full"
-                    minRows={4}
+                    minRows={2}
                   />
                 </motion.div>
                 <motion.div
@@ -175,7 +173,7 @@ export default function Contact() {
           className="w-full lg:w-1/2"
         >
           <Image
-            src="https://nextui.org/images/hero-card-complete.jpeg"
+            src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/300184768_548809990374961_7497026110705637457_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=jaOeIfsj9KkQ7kNvgG8qm8N&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=ArAoPef2ywPikx-AbyhPCll&oh=00_AYA3KA4lOHljlu9pAnMePZGHvT5hb5kCIp_t_2zrZxr4GQ&oe=6749B64D"
             alt="Imagen de contacto"
             width={600}
             className="rounded-lg shadow-lg"

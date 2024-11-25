@@ -1,7 +1,7 @@
 import AdministradorDashboard from "@/components/dashboard/administradorDashBoard/AdministradorDashoard";
 import DefaultLayout from "@/layouts/default";
 
-const DocsPage = () => {
+const AdministradorDashboardPage = () => {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -13,4 +13,4 @@ const DocsPage = () => {
   );
 };
 
-export default DocsPage;
+export default AdministradorDashboardPage;
