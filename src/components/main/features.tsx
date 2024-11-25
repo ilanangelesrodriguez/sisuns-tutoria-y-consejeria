@@ -1,30 +1,32 @@
-import { Card, CardBody, CardHeader } from "@nextui-org/react"
-import { BookOpen, Users, Lightbulb, TrendingUp } from "lucide-react"
+import { Card, CardBody, CardHeader, Button } from "@nextui-org/react"
+import { BookOpen, Users, Lightbulb, TrendingUp, ArrowRight } from 'lucide-react'
 import { motion } from "framer-motion"
-import {Image} from "@nextui-org/image"
-import { WhatsappIcon } from "@/components/icons";;
+import { Image } from "@nextui-org/image"
 
 const features = [
   {
     title: "Asesoría Académica Personalizada",
     description: "Recibe orientación individualizada para mejorar tu rendimiento académico y superar desafíos en tus estudios.",
     icon: BookOpen,
-    
+    color: "bg-blue-500"
   },
   {
     title: "Mentoría de Pares",
     description: "Conéctate con estudiantes de años superiores que te guiarán en tu trayectoria universitaria.",
     icon: Users,
+    color: "bg-green-500"
   },
   {
     title: "Desarrollo de Habilidades Blandas",
     description: "Participa en talleres y actividades que potenciarán tus habilidades de comunicación, liderazgo y trabajo en equipo.",
     icon: Lightbulb,
+    color: "bg-yellow-500"
   },
   {
     title: "Seguimiento de Progreso",
     description: "Monitorea tu avance académico y personal con herramientas de seguimiento y retroalimentación continua.",
     icon: TrendingUp,
+    color: "bg-purple-500"
   },
 ]
 
@@ -48,32 +50,32 @@ const news = [
 
 const testimonials = [
   {
-    name: "Jarol Zapata",
+    name: "HURTADO RAMOS RONALD FABRIZIO",
     role: "Estudiante de Ingeniería",
-    comment: "Esta plataforma ha transformado mi experiencia universitaria. ¡Altamente recomendada!",
-    avatar: "https://osterstatic.reciperm.com/webp/10036.webp",
+    comment: "El profesor Camilo Suárez Rebaza es excepcional. Sus clases son claras y muy enriquecedoras.",
+    avatar: "https://www.universia.net/content/dam/universia/imagenes/estudiantes-universitarios.jpg",
   },
   {
-    name: "Rodrigo Muñoz",
-    role: "Sauron",
-    comment: "Como mentor, he visto el increíble impacto que tiene en el desarrollo de los estudiantes.",
-    avatar: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/09/02/16621364623205.jpg",
+    name: "RAMOS ENCARNACIÓN NILTON",
+    role: "Estudiante de Ingeniería",
+    comment: "Las clases del profesor Camilo Suárez Rebaza han sido fundamentales para mi aprendizaje.",
+    avatar: "https://www.universia.net/content/dam/universia/imagenes/estudiantes-universitarios.jpg",
   },
 ]
 
 export default function Features() {
   return (
-    <div className="min-h-screen from-blue-50 to-purple-100">
-      <section id="features" className="py-20 px-4">
+    <div className="min-h-screen">
+      <section id="features" className="py-10 px-4">
         <motion.h2 
-          className="text-4xl font-bold text-center mb-10 text-primary"
+          className="text-3xl font-bold text-center mb-10 text-primary"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           Características de Nuestro Sistema
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -81,13 +83,15 @@ export default function Features() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="p-5  shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardHeader className="flex gap-3">
-                  <feature.icon className="w-8 h-8 text-primary" />
+              <Card className="p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <CardHeader className="flex gap-4 items-center pb-4">
+                  <div className={`p-3 rounded-full ${feature.color}`}>
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
                   <h3 className="text-xl font-semibold text-primary">{feature.title}</h3>
                 </CardHeader>
                 <CardBody>
-                  <p className="text-gray-600">{feature.description}</p>
+                    <p className="text-gray-600 text-base">{feature.description}</p>
                 </CardBody>
               </Card>
             </motion.div>
@@ -95,16 +99,16 @@ export default function Features() {
         </div>
       </section>
 
-      <section id="news" className="py-20 px-4 ">
+      <section id="news" className="py-10 px-4">
         <motion.h2 
-          className="text-4xl font-bold text-center mb-10 text-primary"
+          className="text-3xl font-bold text-center mb-10 text-primary"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           Últimas Noticias
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {news.map((item, index) => (
             <motion.div
               key={index}
@@ -112,11 +116,24 @@ export default function Features() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="overflow-hidden">
-                <Image src={item.image} alt={item.title} width={300} height={200} className="w-full h-48 object-cover" />
-                <CardBody>
-                  <h3 className="text-xl font-semibold mb-2 text-primary">{item.title}</h3>
-                  <p className="text-gray-500">{item.date}</p>
+              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <Image 
+                  src={item.image} 
+                  alt={item.title} 
+                  width={400} 
+                  height={250} 
+                  className="w-full h-56 object-cover"
+                />
+                <CardBody className="p-6">
+                  <h3 className="text-2xl font-semibold mb-3 text-primary">{item.title}</h3>
+                  <p className="text-gray-500 mb-4">{item.date}</p>
+                  <Button 
+                    color="primary" 
+                    variant="flat" 
+                    endContent={<ArrowRight className="ml-2" />}
+                  >
+                    Leer más
+                  </Button>
                 </CardBody>
               </Card>
             </motion.div>
@@ -124,16 +141,16 @@ export default function Features() {
         </div>
       </section>
 
-      <section id="testimonials" className="py-20 px-4">
+      <section id="testimonials" className="py-10 px-4">
         <motion.h2 
-          className="text-4xl font-bold text-center mb-10 text-primary"
+          className="text-3xl font-bold text-center mb-10 text-primary"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           Lo que dicen nuestros usuarios
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -141,35 +158,25 @@ export default function Features() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card className="p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <CardBody className="flex flex-col items-center text-center">
-                  <Image src={testimonial.avatar} alt={testimonial.name} width={100} height={100} className="rounded-full mb-4" />
-                  <p className="text-gray-600 mb-4">"{testimonial.comment}"</p>
-                  <h4 className="font-semibold text-primary">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  <Image 
+                    src={testimonial.avatar} 
+                    alt={testimonial.name} 
+                    width={120} 
+                    height={120} 
+                    className="rounded-full mb-6 border-4 border-primary"
+                  />
+                  <p className="text-gray-600 mb-6 italic">"{testimonial.comment}"</p>
+                  <h4 className="font-semibold text-primary text-lg">{testimonial.name}</h4>
+                  <p className="text-gray-500">{testimonial.role}</p>
                 </CardBody>
               </Card>
             </motion.div>
           ))}
         </div>
       </section>
-
-      <motion.div
-        className="fixed bottom-6 right-6 z-50"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ type: "spring", stiffness: 260, damping: 20 }}
-      >
-        <a
-          href="https://wa.me/1234567890"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center w-16 h-16 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300"
-        >
-          <WhatsappIcon />
-          
-        </a>
-      </motion.div>
     </div>
   )
 }
+

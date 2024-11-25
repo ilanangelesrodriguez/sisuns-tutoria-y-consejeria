@@ -12,7 +12,6 @@ import AdministradorDashboard from "./pages/dashboards/AdministradorDashboard";
 
 import GroupAppointment from "./pages/forms/Appointments/groupAppointment";
 import SchedulesPage from "@/pages/SchedulesPage";
-// import 'react-datepicker/dist/react-datepicker.css'; 
 import SingleAppointment from "./pages/forms/Appointments/singleAppointment";
 import AssignStudents from "./pages/test_jhoan/assignStudents";//AssignStudents
 import InfPersonalDocente from "./pages/test_jhoan/infPersonalDocente";//InfPersonalDocente
@@ -20,9 +19,9 @@ import PruebaServer from "./pages/test_jhoan/TestServer";//__PruebaServer
 
 import MainAuth from "./pages/auth/MainAuth";
 
-
 import TestStudentForm from "./pages/test_jhoan/studentForm";
 import Forms from "./pages/test_jhoan/forms";
+import ContactPage from "./pages/contact";
 
 function App() {
 
@@ -32,6 +31,10 @@ function App() {
       <Route element={<BlogPage />} path="/blog" />
       <Route element={<AboutPage />} path="/nosotros" />
       <Route element={<Login />} path="/login" />
+      <Route element={<ContactPage />} path="/contacto" />
+
+      <Route element={<MainAuth />} path="/main_auth" />
+      
       <Route element={<GroupAppointment />} path="/group_appointment" />
       <Route element={<SingleAppointment />} path="/single_appointment" />
 
@@ -46,7 +49,7 @@ function App() {
 
 
       <Route element={<TestStudentForm />} path="/form_info_student" />
-      <Route element={<MainAuth />} path="/main_auth" />
+      
 
       <Route element={<InfPersonalDocente />} path="/form_info_personal_professor" />
       <Route element={<Forms />} path="/forms" />

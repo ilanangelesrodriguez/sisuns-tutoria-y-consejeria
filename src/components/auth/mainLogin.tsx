@@ -4,7 +4,7 @@ import  ItemMainLogin from "@/components/auth/itemMainLogin";
 
 const MainLogin = () =>{
     return(
-            <Card className="p-5 py-8 gap-6 flex flex-row item-center justify-center flex-wrap">
+            <Card className="p-5 py-8 mb-5 gap-6 flex flex-row item-center justify-center flex-wrap">
                 <h3 className="text-2xl font-bold">CONTROL DE ACCESO</h3>
                 <Divider />
                 <ItemMainLogin tipo="Estudiante" message="Accede como estudiante" description="Módulos de apoyo para la actividad del tutor y consejero." href="/student_dashboard">

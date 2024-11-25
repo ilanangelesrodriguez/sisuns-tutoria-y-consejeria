@@ -3,12 +3,12 @@ import Hero from "@/components/main/hero";
 import Features from "@/components/main/features";
 import Contact from "@/components/main/contact";
 import Professor from "@/components/main/professor";
-// import 'react-datepicker/dist/react-datepicker.css';
 
 export default function IndexPage() {
+
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <section className="flex flex-col items-center justify-center gap-4 md:py-5">
         <Hero />
         <Features />
         <Professor />

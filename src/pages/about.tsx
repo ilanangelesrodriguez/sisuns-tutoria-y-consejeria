@@ -1,12 +1,12 @@
-import { title } from "@/components/primitives";
+import Features from "@/components/main/features";
 import DefaultLayout from "@/layouts/default";
 
 export default function DocsPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block max-w-lg text-center justify-center">
-          <h1 className={title()}>Nosotros</h1>
+      <section className="flex flex-col items-center justify-center gap-4 py-2 md:py-2">
+        <div className="inline-block text-center justify-center">
+          <Features />
         </div>
       </section>
     </DefaultLayout>

@@ -5,11 +5,6 @@ export const siteConfig = {
   description: "Sistema de tutoría y consejería para la escuela de Ingeniería de Sistemas e Informática en la Universidad Nacional del Santa",
   navItems: [
     {
-      label: "Inicio",
-      href: "/",
-      type: "main",
-    },
-    {
       label: "Blog",
       href: "/blog",
       type: "main",
@@ -34,8 +29,8 @@ export const siteConfig = {
 
     //TIPO MENU
     {
-      label: "Contactos",
-      href: "/contactos",
+      label: "Contacto",
+      href: "/contacto",
       type: "main",
     },
     {
