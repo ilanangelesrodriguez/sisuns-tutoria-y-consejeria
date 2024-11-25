@@ -1,10 +1,11 @@
 import MainLogin from "@/components/auth/mainLogin";
+import DefaultLayout from "@/layouts/default";
 
 export default function DocsPage() {
     return (
-        <div className="w-full p-10">
-            <MainLogin />
-        </div>
+        <DefaultLayout>
+                <MainLogin />
+        </DefaultLayout>
     );
 }
 
