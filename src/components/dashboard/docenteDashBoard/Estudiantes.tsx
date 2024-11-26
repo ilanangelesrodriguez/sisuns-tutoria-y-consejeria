@@ -43,7 +43,6 @@ const Estudiantes: React.FC = () => {
             tutorName={`${estudiante.nombre} ${estudiante.apellido_paterno} ${estudiante.apellido_materno}`}
             celular={estudiante.celular}
             correo={estudiante.correo_institucional}
-            modality="Grupal" // Ajusta según los datos reales si están disponibles
             fecha_nacimiento={estudiante.fecha_nacimiento}
             codigo_matricula={estudiante.codigo_matricula}
             anio_estudio={estudiante.anio_estudio}

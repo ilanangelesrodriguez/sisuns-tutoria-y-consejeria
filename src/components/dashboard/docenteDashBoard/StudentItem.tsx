@@ -6,7 +6,6 @@ interface AppointmentItemProps {
   tutorName: string;
   celular: string;
   correo: string;
-  modality: string;
   fecha_nacimiento: string;
   codigo_matricula: string;
   anio_estudio: string;
