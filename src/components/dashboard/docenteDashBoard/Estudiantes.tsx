@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import ProfessorItem from './ProfessorItem';
-import { getDocentesAsignados } from '@/services/studentService';
-import { Docente } from '@/models/docente'; // Importa la interfaz Docente
+import StudentItem from './StudentItem';
+import { getEstudiantesAsignados } from '@/services/professorServices';
+import Estudiante from '@/models/estudiante';
 
-const Profesores: React.FC = () => {
-  const [docentes, setDocentes] = useState<Docente[]>([]); // Datos dinámicos de docentes
+const Estudiantes: React.FC = () => {
+  const [estudiantes, setEstudiantes] = useState<Estudiante[]>([]); // Datos dinámicos de docentes
   const [error, setError] = useState<string | null>(null); // Estado para errores
   const [loading, setLoading] = useState<boolean>(true); // Estado de carga
 
   useEffect(() => {
     const fetchDocentes = async () => {
       try {
-        const data = await getDocentesAsignados(); // Llama al servicio para obtener datos
-        setDocentes(data); // Guarda los datos obtenidos
+        const data = await getEstudiantesAsignados(); // Llama al servicio para obtener datos
+        setEstudiantes(data); // Guarda los datos obtenidos
       } catch (err) {
         setError('Error al cargar los docentes asignados');
         console.error(err);
@@ -34,16 +34,19 @@ const Profesores: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-6 size:lg w-full">
-      {docentes.length === 0 ? (
+      {estudiantes.length === 0 ? (
         <p>No hay docentes asignados disponibles.</p>
       ) : (
-        docentes.map((docente, index) => (
-          <ProfessorItem
+        estudiantes.map((estudiante, index) => (
+          <StudentItem
             key={index}
-            tutorName={`${docente.nombre} ${docente.apellidoPaterno} ${docente.apellidoMaterno}`}
-            celular={docente.celular}
-            correo={docente.correoInstitucional}
+            tutorName={`${estudiante.nombre} ${estudiante.apellido_paterno} ${estudiante.apellido_materno}`}
+            celular={estudiante.celular}
+            correo={estudiante.correo_institucional}
             modality="Grupal" // Ajusta según los datos reales si están disponibles
+            fecha_nacimiento={estudiante.fecha_nacimiento}
+            codigo_matricula={estudiante.codigo_matricula}
+            anio_estudio={estudiante.anio_estudio}
           />
         ))
       )}
@@ -51,4 +54,4 @@ const Profesores: React.FC = () => {
   );
 };
 
-export default Profesores;
+export default Estudiantes;

@@ -1,0 +1,41 @@
+[
+    {
+        "estudiante_id": "E123456789001",
+        "nombre": "Shom",
+        "apellido_paterno": "Sánchez",
+        "apellido_materno": "García",
+        "codigo_matricula": "202345678",
+        "correo_institucional": "shom@uns.edu",
+        "anio_estudio": "04",
+        "sexo": "M",
+        "fecha_nacimiento": "2005-08-15",
+        "celular": "987654321",
+        "clave": "3$fjk*21d"
+      },
+      {
+        "estudiante_id": "E987654321002",
+        "nombre": "María",
+        "apellido_paterno": "Gómez",
+        "apellido_materno": "Ramírez",
+        "codigo_matricula": "202312345",
+        "correo_institucional": "maria.gomez@uns.edu",
+        "anio_estudio": "03",
+        "sexo": "F",
+        "fecha_nacimiento": "2006-11-25",
+        "celular": "912345678",
+        "clave": "asK#19!po"
+      },
+      {
+        "estudiante_id": "E456789123003",
+        "nombre": "Luis",
+        "apellido_paterno": "Hernández",
+        "apellido_materno": "Sánchez",
+        "codigo_matricula": "202356789",
+        "correo_institucional": "luis.hernandez@uns.edu",
+        "anio_estudio": "05",
+        "sexo": "M",
+        "fecha_nacimiento": "2004-05-10",
+        "celular": "978321654",
+        "clave": "9dHd#k!03"
+      }
+]

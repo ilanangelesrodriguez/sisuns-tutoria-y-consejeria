@@ -80,7 +80,7 @@ export const Navbar = ({ isLoggedIn = false, userAvatar = "" }) => {
               </DropdownMenu>
             </Dropdown>
           ) : (
-            <Button as={Link} color="primary" href="/main_auth" variant="flat" startContent={<LogIn size={16} />}>
+            <Button as={Link} color="primary" className='bg-wo-41B3A4' href="/main_auth" variant="flat" startContent={<LogIn size={16} />}>
               Entrar
             </Button>
           )}
