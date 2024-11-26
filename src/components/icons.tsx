@@ -74,6 +74,9 @@ export const Logo: React.FC<IconSvgProps> = ({
 );
 
 
+
+
+
 export const DiscordIcon: React.FC<IconSvgProps> = ({
   size = 24,
   width,
@@ -202,6 +205,26 @@ export const IconLogIn = ({ size = 24, color = 'currentColor', ...props }) => (
     />
   </svg>
 );
+
+export const PhoneIcon = ({ size = 24, color = 'currentColor', ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke={color}
+    width={size}
+    height={size}
+    {...props}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+    />
+  </svg>
+);
+
 
 export const UserIcon = ({ size = 24, color = 'currentColor', ...props }) => (
   <svg

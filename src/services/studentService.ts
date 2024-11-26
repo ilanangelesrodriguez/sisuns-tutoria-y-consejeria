@@ -1,5 +1,8 @@
 import apiClient from "@/config/apiClient";
+import { Docente } from "@/models/docente";
 import Estudiante from "@/models/estudiante";
+
+const API_URL = 'public/v1/api/docentesAsignados.json';
 
 export const getEstudiantes = async (): Promise<Estudiante[]> => {
     try {
@@ -75,6 +78,20 @@ export const deleteEstudiante = async (id: string): Promise<void> => {
     await apiClient.delete(`/estudiantes/${id}`);
   } catch (error) {
     console.error(`Error al eliminar el estudiante con ID ${id}:`, error);
+    throw error;
+  }
+};
+
+export const getDocentesAsignados = async (): Promise<Docente[]> => {
+  try {
+    const response = await fetch(API_URL);
+    if (!response.ok) {
+      throw new Error('Error al cargar el archivo JSON');
+    }
+    const data = await response.json();
+    return data as Docente[];
+  } catch (error) {
+    console.error('Error al obtener docentes asignados:', error);
     throw error;
   }
 };

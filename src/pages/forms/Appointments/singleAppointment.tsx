@@ -1,3 +1,4 @@
+
 import SingleAppointment from "@/components/Forms/Appointments/single/singleAppointment";
 // import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";

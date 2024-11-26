@@ -8,13 +8,3 @@ export default function DocsPage() {
         </DefaultLayout>
     );
 }
-
-// import MainLogin from "@/components/auth/mainLogin";
-// const MainAuth = ()=>{
-//     return (
-//         <div className="w-full p-10">
-//             <MainLogin />
-//         </div>
-//     )
-// }
-// export default MainAuth;
