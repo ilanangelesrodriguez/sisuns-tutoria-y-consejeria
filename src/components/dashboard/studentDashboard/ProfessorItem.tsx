@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import {Card, Button, Tooltip, Chip} from "@nextui-org/react";
-import { PhoneIcon } from '@/components/icons';
+import {Card, Button, Chip} from "@nextui-org/react";
 interface AppointmentItemProps {
   tutorName: string;
   celular: string;
