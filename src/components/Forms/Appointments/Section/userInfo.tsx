@@ -3,7 +3,7 @@ import { User } from '@nextui-org/react';
 const UserInfo = () => {
   return (
     <User
-      className='my-0'
+      className='my-0 w-full'
       name="James Rodriguez"
       description="Consejero"
       avatarProps={{

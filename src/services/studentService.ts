@@ -95,3 +95,30 @@ export const getDocentesAsignados = async (): Promise<Docente[]> => {
     throw error;
   }
 };
+export const getDocenteTutorDeEstudiante = async (): Promise<Docente> => {
+  try {
+    const response = await fetch("public/v1/api/tutorAsignado.json");
+    if (!response.ok) {
+      throw new Error('Error al cargar el archivo JSON');
+    }
+    const data = await response.json();
+    return data as Docente;
+  } catch (error) {
+    console.error('Error al obtener docentes asignados:', error);
+    throw error;
+  }
+};
+
+export const getDocenteConsejeroDeEstudiante = async (): Promise<Docente> => {
+  try {
+    const response = await fetch("public/v1/api/consejeroAsignado.json");
+    if (!response.ok) {
+      throw new Error('Error al cargar el archivo JSON');
+    }
+    const data = await response.json();
+    return data as Docente;
+  } catch (error) {
+    console.error('Error al obtener docentes asignados:', error);
+    throw error;
+  }
+};

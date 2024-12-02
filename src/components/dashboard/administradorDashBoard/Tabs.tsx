@@ -13,14 +13,14 @@ const Tabs: React.FC<TabsProps> = ({ activeSection, setActiveSection }) => (
       className={activeSection === "citasProgramadas" ? "bg-wo-41B3A4 font-bold" : ""}
       variant={activeSection === "citasProgramadas" ? "flat" : "ghost"}
     >
-      Estudiantes Tutorados
+      Estudiantes Asignados
     </Button>
     <Button
       onClick={() => setActiveSection("citas")}
       className={activeSection === "citas" ? "bg-wo-41B3A4 font-bold" : ""}
       variant={activeSection === "citas" ? "flat" : "ghost"}
     >
-      Estudiantes Aconsejados
+      Citas Programadas
     </Button>
   </ButtonGroup>
 );

@@ -1,55 +1,122 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import {Card, Button, Chip} from "@nextui-org/react";
+import {Card, Button,CardBody, CardFooter, Avatar, CardHeader, Chip} from "@nextui-org/react";
 interface AppointmentItemProps {
-  tutorName: string;
+  nombre: string;
   celular: string;
   correo: string;
-  modality: string;
+  tipo: string;
 }
 
-const ProfessorItem: React.FC<AppointmentItemProps> = ({ tutorName, celular, correo }) => {
+const ProfessorItem: React.FC<AppointmentItemProps> = ({ nombre, celular, correo,tipo }) => {
+  const [isFollowed, setIsFollowed] = React.useState(false);
   const navigate = useNavigate();
-  const handleFormGroup = () => {
-    navigate("/group_appointment");
+  const handleFormAppointment= () => {
+    navigate("/appointment");
   };
   const handleFormSingle = () =>{
     navigate("/single_appointment");
   }
   return (
     
-    <Card className="border p-6 rounded-md shadow-sm">
-      <div className="flex p-0 items-center gap-4 mb-4">
-        <div className="w-12 p-0 h-12 rounded-full flex items-center justify-center font-bold" style={{ borderColor: "#ff6f61", color: "#ff6f61" }}>
-        <img
-          src="public/images/perfil/avatar_docente.jpg" // URL del avatar (puede ser dinámica)
-          alt="Tutor Avatar"
-          className="w-full h-full rounded-full object-cover"
-        />
+    <Card className="max-w-[460px] p-2 gap-0 w-full">
+      <CardHeader className="justify-between gap-4">
+        <div className="flex gap-5">
+          <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />
+          <div className="flex flex-col gap-1 items-start justify-center">
+            <h4 className="text-small font-semibold leading-none text-default-600">{nombre}</h4>
+            <h5 className="text-small tracking-tight text-default-400">{correo}</h5>
+          </div>
         </div>
-        <div>
-          <p className='bold font-bold'>DOCENTE ASIGNADO</p>
-          <p>{tutorName}</p>
+        <Button
+          className="bg-success text-foreground border-default-200"
+          color="success"
+          radius="sm"
+          size="sm"
+          variant= "bordered"
+        >
+          Comparar
+        </Button>
+        <Button
+          className="bg-success text-foreground border-default-200"
+          color="success"
+          radius="sm"
+          size="sm"
+          variant= "bordered"
+          onClick={handleFormAppointment}
+        >
+          Programar Cita
+        </Button>
+      </CardHeader>
+      <CardFooter className="gap-4">
+        <div className="flex gap-1">
+          <p className="font-semibold text-default-400 text-small">Celular</p>
+          <p className=" text-default-400 text-small">{celular}</p>
         </div>
-      </div>
-      <div className="mb-4 p-1">
-        <h4>Datos de contacto:</h4>
-        <div className="flex gap-2">
-            <Chip radius="lg">+51 {celular}</Chip>
-            <Chip radius="lg"> {correo}</Chip>
+        <div className="flex gap-1">
+          <p className="font-semibold text-default-400 text-small">Docente</p>
+          <p className="text-default-400 text-small">{tipo}</p>
         </div>
-
-
-      </div>
-
-      <div className="mb-4 p-1">
-        <div className="flex gap-3 mt-0">
-          <Button className='font-bold bg-solid-41B3A4 text-green-50' onClick={handleFormGroup}>Reservar Cita</Button>
-          <Button className='font-bold bg-solid-41B3A4 text-green-50' onClick={handleFormSingle}>Comparar</Button>
-        </div>
-      </div>
+      </CardFooter>
     </Card>
   );
 };
 
 export default ProfessorItem;
+
+
+// import React from 'react';
+// import { useNavigate } from "react-router-dom";
+// import {Card, Button, Chip} from "@nextui-org/react";
+// interface AppointmentItemProps {
+//   tutorName: string;
+//   celular: string;
+//   correo: string;
+//   tipo: string;
+// }
+
+// const ProfessorItem: React.FC<AppointmentItemProps> = ({ tutorName, celular, correo,tipo }) => {
+//   const navigate = useNavigate();
+//   const handleFormGroup = () => {
+//     navigate("/group_appointment");
+//   };
+//   const handleFormSingle = () =>{
+//     navigate("/single_appointment");
+//   }
+//   return (
+    
+//     <Card className="border p-6 rounded-md shadow-sm">
+//       <div className="flex p-4 items-center gap-4 mb-4 bg-solid-41B3A4 dark:text-default text-white rounded-md" color='success'>
+//         <div className="w-12 p-0 h-12 rounded-full flex items-center justify-center font-bold" style={{ borderColor: "#ff6f61", color: "#ff6f61" }}>
+//         <img
+//           src="public/images/perfil/avatar_docente.jpg" // URL del avatar (puede ser dinámica)
+//           alt="Tutor Avatar"
+//           className="w-full h-full rounded-full object-cover"
+//         />
+//         </div>
+//         <div>
+//           <p className='bold font-bold'>{tipo}</p>
+//           <p>{tutorName}</p>
+//         </div>
+//       </div>
+//       <div className="mb-4 p-1">
+//         <h4>Datos de contacto:</h4>
+//         <div className="flex gap-2">
+//             <Chip radius="lg">+51 {celular}</Chip>
+//             <Chip radius="lg"> {correo}</Chip>
+//         </div>
+
+
+//       </div>
+
+//       <div className="mb-4 p-1">
+//         <div className="flex gap-3 mt-0">
+//           <Button className='font-bold bg-solid-41B3A4 text-green-50' onClick={handleFormGroup}>Reservar Cita</Button>
+//           <Button className='font-bold bg-solid-41B3A4 text-green-50' onClick={handleFormSingle}>Comparar</Button>
+//         </div>
+//       </div>
+//     </Card>
+//   );
+// };
+
+// export default ProfessorItem;

@@ -1,0 +1,21 @@
+{
+    "id": "DOC-2024-0004",
+    "nombre": "Carlos Fann",
+    "apellidoPaterno": "Ramírez",
+    "apellidoMaterno": "Santos",
+    "escolaridad": "Maestría",
+    "maxGradoAcademico": "Doctorado",
+    "departamentoAcademico": "CIVIL Y SISTEMAS",
+    "condicion": "CONTRATADO",
+    "condicionCodigo": "N",
+    "categoria": "PRINCIPAL",
+    "categoriaCodigo": "P",
+    "dedicacion": "DOCENTE_CONTRATADO",
+    "dedicacionCodigo": "D.E.",
+    "celular": "987654333",
+    "aniosDocencia": 5,
+    "sexoCodigo": "F",
+    "sexo": "FEMENINO",
+    "correoInstitucional": "cramirezsa@uns.edu.pe",
+    "clave": "clave0003"
+  }

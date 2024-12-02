@@ -1,19 +1,21 @@
-import { Card } from "@nextui-org/react";
+import React from "react";
+import { useState } from "react";
+import { Card, Select, SelectItem, Input } from "@nextui-org/react";
+import { Divider } from "@nextui-org/divider";
+import { useNavigate } from "react-router-dom";
+import ScheduleItem from "./ScheduleItem";
+
 const StudentScheduleForm = () => {
   return (
-    
-      <Card className=" p-6 rounded-lg shadow-md max-w-md mx-auto mt-10 ">
-        <h2 className="text-2xl font-semibold text-center text-teal-600 mb-4">Horario Estudiante</h2>
-        <label className="block text-gray-600 mb-1">Horario ID:</label>
-        <input type="text" className="w-full p-2 border border-gray-300 rounded mb-2" />
-        <label className="block text-gray-600 mb-1">Estudiante ID:</label>
-        <input type="text" className="w-full p-2 border border-gray-300 rounded mb-2" />
-        <label className="block text-gray-600 mb-1">Condición Matrícula:</label>
-        <input type="text" className="w-full p-2 border border-gray-300 rounded mb-2" />
-        <button className="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 w-full">Guardar</button>
-      </Card>
-    
+    <Card
+      className="shadow-lg rounded-lg  gap-6 items-start sm:p-0 sm:w-full md:w-[700px] md:p-2 lg:w-[800px]"
+    >
+      <p className="font-bold text-center w-full py-1">
+        SELECCIONA HORARIO
+      </p>
+      <Divider />
+      <ScheduleItem />
+    </Card>
   );
 };
-
 export default StudentScheduleForm;

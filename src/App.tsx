@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import {Route, Routes } from "react-router-dom";
 
 import IndexPage from "@/pages/index";
 import BlogPage from "@/pages/blog";
@@ -8,8 +8,8 @@ import NotFound from "@/pages/notFound/notFound";
 import StudentDashboard from "./pages/dashboards/StudentDashboard";
 import DocenteDashboard from "./pages/dashboards/DocenteDashboard";
 
-import GroupAppointment from "./pages/forms/Appointments/groupAppointment";
-import SchedulesPage from "@/pages/SchedulesPage";
+import Appointment from "./pages/forms/Appointments/Appointment";
+import SchedulesPage from "@/pages/forms/Appointments/Schedule";
 import SingleAppointment from "./pages/forms/Appointments/singleAppointment";
 import AssignStudents from "./pages/test_jhoan/assignStudents";//AssignStudents
 import InfPersonalDocente from "./pages/test_jhoan/infPersonalDocente";//InfPersonalDocente
@@ -20,25 +20,26 @@ import MainAuth from "./pages/auth/MainAuth";
 import TestStudentForm from "./pages/test_jhoan/studentForm";
 import Forms from "./pages/test_jhoan/forms";
 import ContactPage from "./pages/contact";
-import AuthenticatedRoute from "./context/authenticatedRoute";
-import { AuthProvider, useAuth } from "@/context/authContext";
+// import AuthenticatedRoute from "./context/authenticatedRoute";
+import { AuthProvider } from "@/context/authContext";
+// import { AuthProvider, useAuth } from "@/context/authContext";
 import LoginPage from "@/pages/login/login";
 import AdministradorDashboardPage from "./pages/dashboards/AdministradorDashboard";
 
 
-interface ProtectedRouteProps {
-  children: React.ReactNode;
-}
+// interface ProtectedRouteProps {
+//   children: React.ReactNode;
+// }
 
-const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
-  const { isAuthenticated } = useAuth();
+// const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
+//   const { isAuthenticated } = useAuth();
 
-  return isAuthenticated ? (
-    <>{children}</>
-  ) : (
-    <Navigate to="/login" />
-  );
-};
+//   return isAuthenticated ? (
+//     <>{children}</>
+//   ) : (
+//     <Navigate to="/login" />
+//   );
+// };
 
 function App() {
 
@@ -53,13 +54,17 @@ function App() {
 
         <Route element={<MainAuth />} path="/main_auth" />
 
-        <Route path="/login" element={<AuthenticatedRoute><LoginPage /></AuthenticatedRoute>} />
+        {/* <Route path="/login" element={<AuthenticatedRoute><LoginPage /></AuthenticatedRoute>} />
         <Route path="/administrador_dashboard" element={<ProtectedRoute><AdministradorDashboardPage /></ProtectedRoute>} />
         <Route path="/student_dashboard" element={<ProtectedRoute><StudentDashboard /></ProtectedRoute>} />
-        <Route path="/docente_dashboard" element={<ProtectedRoute><DocenteDashboard /></ProtectedRoute>} />
+        <Route path="/docente_dashboard" element={<ProtectedRoute><DocenteDashboard /></ProtectedRoute>} /> */}
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/administrador_dashboard" element={<AdministradorDashboardPage />} />
+        <Route path="/student_dashboard" element={<StudentDashboard />} />
+        <Route path="/docente_dashboard" element={<DocenteDashboard />} />
 
-
-        <Route element={<GroupAppointment />} path="/group_appointment" />
+        <Route element={<SchedulesPage />} path="/appointment/schedule" />
+        <Route element={<Appointment />} path="/appointment" />
         <Route element={<SingleAppointment />} path="/single_appointment" />
 
         <Route element={<SchedulesPage />} path="/schedules" />

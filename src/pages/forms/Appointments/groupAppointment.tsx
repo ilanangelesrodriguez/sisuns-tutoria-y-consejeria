@@ -1,4 +1,4 @@
-import GroupAppointment from "@/components/Forms/Appointments/group/groupAppointment";
+import GroupAppointment from "@/components/Forms/Appointments/Section/groupAppointment";
 // import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 
