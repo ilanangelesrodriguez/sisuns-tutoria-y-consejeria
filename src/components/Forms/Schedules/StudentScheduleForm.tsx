@@ -1,8 +1,5 @@
-import React from "react";
-import { useState } from "react";
-import { Card, Select, SelectItem, Input } from "@nextui-org/react";
+import { Card } from "@nextui-org/react";
 import { Divider } from "@nextui-org/divider";
-import { useNavigate } from "react-router-dom";
 import ScheduleItem from "./ScheduleItem";
 
 const StudentScheduleForm = () => {
