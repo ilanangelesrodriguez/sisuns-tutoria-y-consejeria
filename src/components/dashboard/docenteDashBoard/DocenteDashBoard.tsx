@@ -6,7 +6,6 @@ import StudentInfo from './DocenteInfo';
 import Tabs from './Tabs';
 import Estudiantes from './Estudiantes';
 import Styles from "@/components/dashboard/docenteDashBoard/DocenteDashboard.module.css";
-import Appointments from './Appointments';
 
 const DocenteDashboard = () => {
   const [activeSection, setActiveSection] = useState("citasProgramadas");
