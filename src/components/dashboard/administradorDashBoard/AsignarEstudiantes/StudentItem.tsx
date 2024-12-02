@@ -1,5 +1,5 @@
 import React from "react";
-import { Table, TableHeader, TableColumn, TableBody, TableRow, ChipProps, TableCell, User, Button, Chip, Tooltip } from "@nextui-org/react";
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, User, Chip, Tooltip } from "@nextui-org/react";
 import { columns } from "./data"; // Asegúrate de que columns tenga claves correctas
 import Estudiante from "@/models/estudiante";
 import { EditIcon, EyeIcon } from "@/components/icons";
