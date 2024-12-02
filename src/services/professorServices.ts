@@ -73,6 +73,9 @@ export const getEstudiantesAsignados = async (semestre: string, id: string): Pro
 
 */
 // ############## DESACTIVA EN PRUEBA ONLINE #####################
+/*
+
+*/
 export const getEstudiantesAsignados = async (): Promise<Estudiante[]> => {
     try {
       const response = await fetch('public/v1/api/estudiantesAsignados.json');

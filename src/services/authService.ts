@@ -3,6 +3,38 @@ import axios from 'axios';
 
 const API_URL = 'public/v1/api/estudiantes.json';
 
+
+export const login = async (correo_institucional: string, contrasena:string) => {
+  try{
+    const response = await axios.post("http://157.173.97.224:8080/auth/login", {
+      email : correo_institucional,
+      password: contrasena,
+      type: "Estudiante"
+    });
+    console.log(response.data);
+    const {token, roles} = response.data;
+    
+    if (!token) {
+      throw new Error("No se recibió un token de autenticación");
+    }
+    
+    localStorage.setItem("authToken", token);
+    localStorage.setItem("roles", JSON.stringify(roles));
+
+    return {token, roles};
+  } catch (error) {
+    throw new Error((error as any).response?.data?.message || 'Error al iniciar sesión')
+  }
+
+}
+/*
+{
+    "email":"202414008@uns.edu.pe",
+    "password":"claveE0008",
+    "type":"Estudiante"
+}
+
+----PRUEBAS LOCAL:
 export const login = async (correo: string, clave: string) => {
   try {
     const response = await axios.get(API_URL);
@@ -19,6 +51,7 @@ export const login = async (correo: string, clave: string) => {
     throw new Error((error as any).response?.data?.message || 'Error al iniciar sesión');
   }
 };
+*/
 
 export const getEstudiantes = async () => {
   try {

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Card } from '@nextui-org/react';
-import UserInfo from '@/components/Forms/Appointments/group/userInfo';
-import TimeSelector from '@/components/Forms/Appointments/group/timeSelector';
-import SubmitButton from '@/components/Forms/Appointments/group/submitButton';
+import UserInfo from '@/components/Forms/Appointments/Section/userInfo';
+import TimeSelector from '@/components/Forms/Appointments/Section/timeSelector';
+import SubmitButton from '@/components/Forms/Appointments/Section/submitButton';
 import {Divider} from "@nextui-org/divider";
 
 const SingleAppointment = () => {

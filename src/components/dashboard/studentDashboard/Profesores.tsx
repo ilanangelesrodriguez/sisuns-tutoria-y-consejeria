@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import ProfessorItem from './ProfessorItem';
-import { getDocentesAsignados } from '@/services/studentService';
+import { getDocenteConsejeroDeEstudiante, getDocenteTutorDeEstudiante } from '@/services/studentService';
 import { Docente } from '@/models/docente'; // Importa la interfaz Docente
 
 const Profesores: React.FC = () => {
-  const [docentes, setDocentes] = useState<Docente[]>([]); // Datos dinámicos de docentes
+  const [tutor, setTutor] = useState<Docente>();
+  const [consejero, setConsejero] = useState<Docente>();
   const [error, setError] = useState<string | null>(null); // Estado para errores
   const [loading, setLoading] = useState<boolean>(true); // Estado de carga
 
   useEffect(() => {
     const fetchDocentes = async () => {
       try {
-        const data = await getDocentesAsignados(); // Llama al servicio para obtener datos
-        setDocentes(data); // Guarda los datos obtenidos
+        const consejero = await getDocenteConsejeroDeEstudiante();
+        const tutor = await getDocenteTutorDeEstudiante(); // Llama al servicio para obtener datos
+        setConsejero(consejero); // Guarda los datos obtenidos
+        setTutor(tutor); // Guarda los datos obtenidos
       } catch (err) {
         setError('Error al cargar los docentes asignados');
         console.error(err);
@@ -34,18 +37,30 @@ const Profesores: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-6 size:lg w-full">
-      {docentes.length === 0 ? (
-        <p>No hay docentes asignados disponibles.</p>
+      {tutor || consejero ? (
+        <>
+          {/* Renderiza el tutor si existe */}
+          {tutor && (
+            <ProfessorItem
+              tipo="Tutor"
+              nombre={`${tutor.nombre} ${tutor.apellidoPaterno} ${tutor.apellidoMaterno}`}
+              celular={tutor.celular}
+              correo={tutor.correoInstitucional}
+            />
+          )}
+
+          {/* Renderiza el consejero si existe */}
+          {consejero && (
+            <ProfessorItem
+              tipo="Consejero"
+              nombre={`${consejero.nombre} ${consejero.apellidoPaterno} ${consejero.apellidoMaterno}`}
+              celular={consejero.celular}
+              correo={consejero.correoInstitucional}
+            />
+          )}
+        </>
       ) : (
-        docentes.map((docente, index) => (
-          <ProfessorItem
-            key={index}
-            tutorName={`${docente.nombre} ${docente.apellidoPaterno} ${docente.apellidoMaterno}`}
-            celular={docente.celular}
-            correo={docente.correoInstitucional}
-            modality="Grupal" // Ajusta según los datos reales si están disponibles
-          />
-        ))
+        <p>No hay docentes asignados disponibles.</p>
       )}
     </div>
   );
