@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Table,
   TableHeader,
@@ -7,12 +7,9 @@ import {
   TableRow,
   TableCell,
   Button,
-  select,
-  Tooltip,
-  Chip,
+  Tooltip
 } from "@nextui-org/react";
 import { ClockIcon, MinusCircleIcon } from "@/components/icons";
-import { wrap } from "framer-motion";
 
 const ScheduleItem = () => {
   // ESTADO PARA ALMACENAR LAS SELECCIONES DE LOS HORARIOS POR DÍA.
