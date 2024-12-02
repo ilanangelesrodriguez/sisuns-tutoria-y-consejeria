@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import {Card, Button,CardBody, CardFooter, Avatar, CardHeader, Chip} from "@nextui-org/react";
+import {Card, Button, CardFooter, Avatar, CardHeader} from "@nextui-org/react";
 interface AppointmentItemProps {
   nombre: string;
   celular: string;
@@ -9,14 +9,11 @@ interface AppointmentItemProps {
 }
 
 const ProfessorItem: React.FC<AppointmentItemProps> = ({ nombre, celular, correo,tipo }) => {
-  const [isFollowed, setIsFollowed] = React.useState(false);
   const navigate = useNavigate();
   const handleFormAppointment= () => {
     navigate("/appointment");
   };
-  const handleFormSingle = () =>{
-    navigate("/single_appointment");
-  }
+
   return (
     
     <Card className="max-w-[460px] p-2 gap-0 w-full">

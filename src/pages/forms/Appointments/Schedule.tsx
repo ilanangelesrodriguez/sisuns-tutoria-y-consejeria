@@ -1,4 +1,3 @@
-import Appointment from "@/components/Forms/Appointments/Section/Appointment";
 import StudentScheduleForm from "@/components/Forms/Schedules/StudentScheduleForm";
 // import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";

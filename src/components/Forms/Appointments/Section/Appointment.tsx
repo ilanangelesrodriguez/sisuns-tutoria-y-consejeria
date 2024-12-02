@@ -1,15 +1,11 @@
-import React from "react";
-import { useState } from "react";
 import { Card, Select, SelectItem, Input } from "@nextui-org/react";
 import UserInfo from "./userInfo";
 import SubmitButton from "./submitButton";
-import StudentSelection from "./StudentSelection";
 import { Divider } from "@nextui-org/divider";
 import { useNavigate } from "react-router-dom";
 
 const GroupAppointment = () => {
   const navigate = useNavigate();
-  const [selectedTimes, setSelectedTimes] = useState<string[]>([]);
 
   const handleSubmit = () => {
     navigate("/appointment/schedule");

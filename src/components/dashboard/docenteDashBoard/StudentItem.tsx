@@ -1,9 +1,6 @@
 import React from "react";
-import { Table, TableHeader, TableColumn, TableBody, TableRow, ChipProps, TableCell, User, Button, Chip, Tooltip } from "@nextui-org/react";
-import { EditIcon } from "@/components/icons";
-import { DeleteIcon } from "@/components/icons";
-import { EyeIcon } from "@/components/icons";
-import { columns, users } from "./data"; // Asegúrate de que columns tenga claves correctas
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, User, Button, Chip, Tooltip } from "@nextui-org/react";
+import { columns } from "./data"; // Asegúrate de que columns tenga claves correctas
 import Estudiante from "@/models/estudiante";
 
 interface StudentItemProps {
@@ -12,15 +9,6 @@ interface StudentItemProps {
 
 
 
-
-// Mapea el estado del estudiante a los colores del chip
-const statusColorMap: Record<string, ChipProps["color"]> = {
-  active: "success",
-  paused: "danger",
-  vacation: "warning",
-};
-
-type UserType = typeof users[0]; // Cambié el nombre de `User` a `UserType`
 
 const StudentItem: React.FC<StudentItemProps> = ({ estudiantes }) => {
   const renderCell = React.useCallback((user: Estudiante, columnKey: React.Key) => {
